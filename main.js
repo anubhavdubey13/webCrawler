@@ -1,4 +1,6 @@
-function main() {
+const { crawlPage } = require('./crawl')
+
+async function main() {
     const totalInputs = process.argv.length - 2
 
     if (totalInputs < 1) {
@@ -10,6 +12,8 @@ function main() {
     }
     const baseURL = process.argv[2]
     console.log(`started crawling at ${baseURL}`)
+    await crawlPage(baseURL, baseURL, {})
+
 }
 
 main()
