@@ -12,7 +12,8 @@ async function main() {
     }
     const baseURL = process.argv[2]
     console.log(`started crawling at ${baseURL}`)
-    await crawlPage(baseURL, baseURL, {})
+    const resultObj = await crawlPage(baseURL, baseURL, {})
+    console.log(resultObj)
 
 }
 
