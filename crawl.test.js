@@ -12,9 +12,9 @@ const htmlBody = `<html>
 
 const baseURL = "https://wagslane.dev"
 
-test(`URLs ["https://wagslane.dev", "/path", "/project/tags/"] are returned as 
-    ["https://wagslane.dev", "https://wagslane.dev/path", "https://wagslane.dev/project/tags/"] `, () => {
-    expect(getURLsFromHTML(htmlBody, baseURL)).toEqual('["https://wagslane.dev", "https://wagslane.dev/path", "https://wagslane.dev/project/tags/"]')
+test(`URLs ["https://wagslane.dev/", "/path", "/project/tags/"] are returned as 
+    ["https://wagslane.dev/", "https://wagslane.dev/path", "https://wagslane.dev/project/tags/"] `, () => {
+    expect(getURLsFromHTML(htmlBody, baseURL)).toEqual(["https://wagslane.dev/", "https://wagslane.dev/path", "https://wagslane.dev/project/tags/"])
 })
 
 test('Length of returned array should be equal to the number of <a> tags in htmlBody', () => {

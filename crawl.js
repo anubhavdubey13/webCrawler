@@ -1,7 +1,17 @@
 const { JSDOM } = require('jsdom')
 
 function getURLsFromHTML(htmlBody, baseURL) {
-    return [baseURL, baseURL, baseURL]
+    const allURLs = []
+    const dom = new JSDOM(htmlBody)
+    const aElements = dom.window.document.querySelectorAll('a')
+    for (let a of aElements) {
+        if (a.href.slice(0, 1) === '/') {
+            allURLs.push(new URL(a.href, baseURL).href)
+        } else {
+            allURLs.push(new URL(a.href).href)
+        }
+    }
+    return allURLs
 }
 
 function normalizeURL(url) {
