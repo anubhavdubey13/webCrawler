@@ -1,0 +1,23 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "internal links count of a given url",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anubhavdubey13/webCrawler.git"
+  },
+  "author": "Anubhav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anubhavdubey13/webCrawler/issues"
+  },
+  "homepage": "https://github.com/anubhavdubey13/webCrawler#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
