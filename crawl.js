@@ -1,3 +1,9 @@
+const { JSDOM } = require('jsdom')
+
+function getURLsFromHTML(htmlBody, baseURL) {
+    return [baseURL, baseURL, baseURL]
+}
+
 function normalizeURL(url) {
     const urlObj = new URL(url)
     let normURL = `${urlObj.hostname}${urlObj.pathname}`
@@ -8,5 +14,6 @@ function normalizeURL(url) {
 }
 
 module.exports = {
+    getURLsFromHTML,
     normalizeURL
 }
